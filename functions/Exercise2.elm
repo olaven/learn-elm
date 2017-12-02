@@ -9,4 +9,4 @@ upperIfLong name =
     name
 
 main =
-  text (upperIfLong "olavenolavenolaven")
+  text (upperIfLong "elmlaang")
