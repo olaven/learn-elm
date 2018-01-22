@@ -6,5 +6,7 @@ In this repository, I will gather some code I write while I dabble around in a p
 ![Elm logo](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Elm_logo.svg/1200px-Elm_logo.svg.png)
 
 * [This](https://courses.knowthen.com/courses/enrolled/86520) is the course I am going to follow
-* [These](https://github.com/knowthen/elm) are the exercises I will follow along with the course
+* [These](https://github.com/knowthen/elm) are exercises I will follow along with the video course
+*
+I read some some books and articles like [this one](elmprogramming.com). 
 * Elm’s [homepage](elm-lang.org)
