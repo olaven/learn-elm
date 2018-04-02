@@ -1,0 +1,25 @@
+var _user$project$EventListener$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(
+				_elm_lang$core$Basics$toString(model)),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$EventListener$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		return {ctor: '_Tuple2', _0: model + 1, _1: _elm_lang$core$Platform_Cmd$none};
+	});
+var _user$project$EventListener$init = {ctor: '_Tuple2', _0: 0, _1: _elm_lang$core$Platform_Cmd$none};
+var _user$project$EventListener$KeyPressed = function (a) {
+	return {ctor: 'KeyPressed', _0: a};
+};
+var _user$project$EventListener$subscriptions = function (_p1) {
+	return _elm_lang$keyboard$Keyboard$presses(_user$project$EventListener$KeyPressed);
+};
+var _user$project$EventListener$main = _elm_lang$html$Html$program(
+	{init: _user$project$EventListener$init, view: _user$project$EventListener$view, update: _user$project$EventListener$update, subscriptions: _user$project$EventListener$subscriptions})();
