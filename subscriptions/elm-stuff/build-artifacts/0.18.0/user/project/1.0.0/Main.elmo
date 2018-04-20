@@ -1,0 +1,57 @@
+var _user$project$Main$positionAsString = function (position) {
+	return A2(
+		_elm_lang$core$Basics_ops['++'],
+		_elm_lang$core$Basics$toString(position.x),
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			' - ',
+			_elm_lang$core$Basics$toString(position.y)));
+};
+var _user$project$Main$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h1,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Mouse Position'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html$text(
+					_user$project$Main$positionAsString(model.position)),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Main$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		return {
+			ctor: '_Tuple2',
+			_0: _elm_lang$core$Native_Utils.update(
+				model,
+				{position: _p0._0}),
+			_1: _elm_lang$core$Platform_Cmd$none
+		};
+	});
+var _user$project$Main$model = {
+	position: {x: 0, y: 0}
+};
+var _user$project$Main$init = {ctor: '_Tuple2', _0: _user$project$Main$model, _1: _elm_lang$core$Platform_Cmd$none};
+var _user$project$Main$Model = function (a) {
+	return {position: a};
+};
+var _user$project$Main$ChangePosition = function (a) {
+	return {ctor: 'ChangePosition', _0: a};
+};
+var _user$project$Main$subscriptions = function (model) {
+	return _elm_lang$mouse$Mouse$clicks(_user$project$Main$ChangePosition);
+};
+var _user$project$Main$main = _elm_lang$html$Html$program(
+	{init: _user$project$Main$init, update: _user$project$Main$update, view: _user$project$Main$view, subscriptions: _user$project$Main$subscriptions})();
